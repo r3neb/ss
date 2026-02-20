@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  margin: 0;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  position: relative;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Profile Section */
+.profile-section {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.profile-picture {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 12px;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.status-dot-inline {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #ed4245;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.username {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  position: relative;
+  color: #ffffff;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 15px rgba(255, 255, 255, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.8),
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 15px rgba(255, 255, 255, 0.4);
+  }
+
+  50% {
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 1),
+      0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 30px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.status-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #b9bbbe;
+  font-size: 12px;
+}
+
+.status-icons {
+  display: flex;
+  gap: 5px;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
+}
+
+/* Discord Card */
+.discord-card {
+  background-color: #2b2d31;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.discord-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.discord-logo {
+  width: 40px;
+  height: 40px;
+  background-color: #4752c4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discord-logo svg {
+  width: 24px;
+  height: 24px;
+}
+
+.discord-text h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.online-status {
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+.discord-username {
+  color: #b9bbbe;
+  font-size: 12px;
+}
+
+.message-btn {
+  background-color: #4752c4;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.message-btn:hover {
+  background-color: #346beb;
+}
+
+/* Spotify Card */
+.spotify-card {
+  background-color: #2b2d31;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.spotify-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  color: #b9bbbe;
+  font-size: 11px;
+}
+
+.spotify-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.spotify-content {
+  display: flex;
+  gap: 10px;
+}
+
+.album-art img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.song-info {
+  flex: 1;
+}
+
+.song-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.artist-name {
+  color: #b9bbbe;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.playback-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.pause-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background-color: #4e5058;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #1db954;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.time-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #b9bbbe;
+}
+
+/* Languages Section */
+.languages-section {
+  margin-bottom: 15px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #72767d;
+  margin-bottom: 12px;
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.language-badge {
+  background-color: #2b2d31;
+  border-radius: 6px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.language-badge:hover {
+  transform: translateY(-2px);
+  background-color: #35373c;
+}
+
+.lang-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.js .lang-icon {
+  background-color: #f7df1e;
+  color: #000;
+}
+
+.ts .lang-icon {
+  background-color: #3178c6;
+  color: #fff;
+}
+
+.python svg {
+  color: #3776ab;
+  width: 18px;
+  height: 18px;
+}
+
+.tailwind svg {
+  color: #06b6d4;
+  width: 18px;
+  height: 18px;
+}
+
+.php svg {
+  color: #777bb4;
+  width: 18px;
+  height: 18px;
+}
+
+.lua svg {
+  color: #000080;
+  width: 18px;
+  height: 18px;
+}
+
+.mongodb svg {
+  color: #13aa52;
+  width: 18px;
+  height: 18px;
+}
+
+.discord svg {
+  color: #5865f2;
+  width: 18px;
+  height: 18px;
+}
+
+.x-platform svg {
+  color: #fff;
+  width: 18px;
+  height: 18px;
+}
+
+.instagram svg {
+  color: #E1306C;
+  width: 18px;
+  height: 18px;
+}
+
+/* Discord Add Button */
+.discord-add-btn {
+  width: 100%;
+  background-color: #4752c4;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  transition: background-color 0.2s;
+}
+
+.discord-add-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer {
+  text-align: center;
+  color: #72767d;
+  font-size: 10px;
+  padding: 12px 0;
+}
+
+@media (max-width: 450px) {
+  .discord-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
